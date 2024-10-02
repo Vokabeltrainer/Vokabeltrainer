@@ -1651,6 +1651,12 @@
         let vokabellisten = {
             "Spanisch": [
                 { name: "Wortschatz Hendrik", vokabeln: [
+                    { fremdsprache: "¿estás listo/a?", deutsch: "bist du bereit?" },
+                    { fremdsprache: "la parte", deutsch: "der Teil" },
+                    { fremdsprache: "por supuesto", deutsch: "aber klar!, selbstverständlich?" },
+                    { fremdsprache: "preferir (prefiero)", deutsch: "bevorzugen" },
+                    { fremdsprache: "Soy un principiante", deutsch: "Ich bin ein Beginner" },
+                    { fremdsprache: "¿Puede hablar más despacio, por favor?", deutsch: "Können Sie bitte langsamer sprechen" },
                     { fremdsprache: "contener (contengo, contienes)", deutsch: "enthalten" },
                     { fremdsprache: "destrozar", deutsch: "zerstören" },
                     { fremdsprache: "constar de", deutsch: "bestehen aus" },
@@ -39142,27 +39148,17 @@
         }
 
         function zeitenübersicht() {
-            const imageUrls = [
+            const urls = [
                 'https://drive.google.com/file/d/19b2m3xW-MucLATb4MV84DVjmV3t87Psb/preview',
                 'https://drive.google.com/file/d/10mhOxGkrzGzOa_x2nsd-hkPbJ4IFUxsg/preview',
-                'https://drive.google.com/file/d/15vMpNd7OZwVozSYd1hVkVsefb1jV1ItY/preview',
-                'https://drive.google.com/file/d/1f8deDUa_Ypt0U6FS60JASVHaXzEbvsov/preview',
-                'https://drive.google.com/file/d/1hRSz3Hv5uByiRZDY_UG_Oitix3y-7xS4/preview',
-                'https://drive.google.com/file/d/1Pjl94teyK1xWLiFljTszuA1aETEXBgMP/preview',
-                'https://drive.google.com/file/d/1vbS4Q1j9LEnkgj6CLGzdgKZ6U5UJepVb/preview',
-                'https://drive.google.com/file/d/1rQx6H6FCMHgYn0Fi4MjFnS8-InQKL1Xk/preview',
+                'https://drive.google.com/file/d/1fOxp4CZ4qln4OjwG6fMqoCkAXToH6GhW/preview',
                 'https://www.lernenundhelfen.de/lernhilfen/spanisch/zeitformen-vergangenheit-spanisch.htm'
             ];
         
-            const imageTitles = [
+            const titles = [
                 'Zeitenschema',
                 'Übersicht Zeitformen',
-                '-ar Zeitformen',
-                '-er Zeitformen',
-                '-ir Zeitformen',
-                'ser Zeitformen',
-                'haber Zeitformen',
-                'ir Zeitformen',
+                'Zeitformen aktueller Stand',
                 'Zeitformen Verwendung Übersicht'
             ];
         
@@ -39185,7 +39181,7 @@
             closeButton.style.position = 'absolute';
             closeButton.style.top = '0px';
             closeButton.style.left = '10px';
-            closeButton.style.margin= '0px';
+            closeButton.style.margin = '0px';
             closeButton.style.width = '40px';
             closeButton.style.backgroundColor = 'rgba(0, 0, 0, 0)';
             closeButton.style.color = 'white';
@@ -39198,7 +39194,7 @@
             let currentIndex = 0;
         
             const titleDiv = document.createElement('div');
-            titleDiv.textContent = imageTitles[currentIndex];
+            titleDiv.textContent = titles[currentIndex];
             titleDiv.style.color = 'white';
             titleDiv.style.fontSize = '16px';
             titleDiv.style.marginBottom = '0px';
@@ -39210,18 +39206,18 @@
             titleDiv.style.padding = '10px';
         
             const iframe = document.createElement('iframe');
-            iframe.src = imageUrls[currentIndex];
+            iframe.src = urls[currentIndex];
             iframe.style.width = '100%';
             iframe.style.height = '100%';
             iframe.style.border = 'none';
             iframe.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-            iframe.style.pointerEvents = 'none';
+            iframe.style.pointerEvents = 'auto';  // Allow interaction for websites
         
             const prevButton = document.createElement('button');
             prevButton.textContent = '⬅️';
             prevButton.style.position = 'absolute';
             prevButton.style.left = '10px';
-            prevButton.style.margin= '0px';
+            prevButton.style.margin = '0px';
             prevButton.style.bottom = '15px';
             prevButton.style.width = '40px';
             prevButton.style.backgroundColor = 'rgba(255, 255, 255, 0)';
@@ -39235,7 +39231,7 @@
             nextButton.textContent = '➡️';
             nextButton.style.position = 'absolute';
             nextButton.style.left = '10px';
-            nextButton.style.margin= '0px';
+            nextButton.style.margin = '0px';
             nextButton.style.bottom = '60px';
             nextButton.style.width = '40px';
             nextButton.style.backgroundColor = 'rgba(255, 255, 255, 0)';
@@ -39246,43 +39242,26 @@
             nextButton.style.zIndex = '1002';
         
             prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : imageUrls.length - 1;
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : urls.length - 1;
                 updateContent(currentIndex);
             });
         
             nextButton.addEventListener('click', () => {
-                currentIndex = (currentIndex < imageUrls.length - 1) ? currentIndex + 1 : 0;
+                currentIndex = (currentIndex < urls.length - 1) ? currentIndex + 1 : 0;
                 updateContent(currentIndex);
             });
         
             function updateContent(index) {
-                iframe.src = imageUrls[index];
-                titleDiv.textContent = imageTitles[index];
-            }
+                iframe.src = urls[index];
+                titleDiv.textContent = titles[index];
         
-            // Swiping Events
-            let swipeStartX, swipeStartY;
-        
-            overlay.addEventListener('touchstart', (e) => {
-                swipeStartX = e.touches[0].clientX;
-                swipeStartY = e.touches[0].clientY;
-            });
-        
-            overlay.addEventListener('touchend', (e) => {
-                const swipeEndX = e.changedTouches[0].clientX;
-                const swipeEndY = e.changedTouches[0].clientY;
-        
-                const deltaX = swipeEndX - swipeStartX;
-                const deltaY = swipeEndY - swipeStartY;
-        
-                if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
-                    if (deltaX < 0) { // Swipe left
-                        nextButton.click();
-                    } else if (deltaX > 0) { // Swipe right
-                        prevButton.click();
-                    }
+                // Adjust iframe interaction for Google Drive links (disable interaction) and websites (allow interaction)
+                if (urls[index].includes('drive.google.com')) {
+                    iframe.style.pointerEvents = 'none';  // Disable interaction for previews
+                } else {
+                    iframe.style.pointerEvents = 'auto';  // Enable interaction for websites
                 }
-            });
+            }
         
             overlay.appendChild(titleDiv);
             overlay.appendChild(iframe);
@@ -39293,16 +39272,14 @@
         
             closeButton.addEventListener('click', () => {
                 document.body.removeChild(overlay);
-                openNav();
             });
-        }
+        } 
         
         function grammatik() {
             const imageUrls = [
                 'https://drive.google.com/file/d/12c1EEWLQQOHq33dk4LZqe6_iCKmxiN_7/preview',
                 'https://drive.google.com/file/d/12lPDz-jt_RAbztzpkW4RlS2G1fdUORQp/preview',
                 'https://drive.google.com/file/d/11r7F6lqfbqCcoDaTdqiFcJO60_CS0wNw/preview',
-                'https://drive.google.com/file/d/1fOxp4CZ4qln4OjwG6fMqoCkAXToH6GhW/preview',
                 'https://drive.google.com/file/d/16WHRX2_c2dGuJLeZaEzz59deR7uost5M/preview',
                 'https://drive.google.com/file/d/1HrUD0m770Ex7DLdz0c2R3uecZjtRNjv7/preview'
             ];
@@ -39311,7 +39288,6 @@
                 'Personalpronomen',
                 'Präpositionen',
                 'Spanisches Alphabet',
-                'Zeitformen: aktueller Stand',
                 'Körperteile',
                 'Uhrzeit'
             ];
