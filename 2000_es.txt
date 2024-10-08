@@ -1,0 +1,508 @@
+música rock
+hacer una foto
+navegar por Internet
+coleccionar sellos
+sello
+patinaje sobre hielo
+idioma
+artes marciales
+pescar
+jugar al ajedrez
+jugar al póquer
+disfrutar de un hobby
+hacer ejercicio
+hacer ejercicio
+hacer ejercicio
+viajar
+hacer ejercicio
+leer
+jugar a las cartas
+vestíbulo
+cama individual
+cama doble
+servicio despertador
+suite
+no hay plazas libres
+servicio de habitaciones
+hotel
+recepción
+salón
+servicio de lavandería
+registro
+registro de entrada
+registro
+registro
+llave electrónica
+salida
+número de habitación
+llave de la habitación
+reserva
+llamada de despertador
+vacante
+deportes
+parque
+parque infantil
+piscina
+picnic
+bienvenido
+Siéntete como en casa.
+Me llamo...
+Hola.
+Siento haberte hecho esperar.
+¿Cómo has estado?
+Esto es para ti.
+knock
+De nada.
+Cuánto tiempo sin verte.
+Este es (nombre de la persona).
+atleta profesional
+ganador
+perdedor
+Olimpiadas
+Copa del Mundo
+campeón
+estadio
+animar
+semifinal
+competición
+juego
+perder
+ganar
+competición de campeonato
+equipo
+atleta
+jugador
+manager
+artes marciales mixtas
+ping pong
+gimnasia
+correr
+natación
+equitación
+esquí
+atletismo
+tenis
+bádminton
+maratón
+golf
+boxeo
+ciclismo
+automovilismo
+béisbol
+hockey sobre hielo
+voleibol
+baloncesto
+fútbol
+fútbol
+fútbol
+pregunta
+carta
+estudiante
+profesor
+guión
+verbo
+sustantivo
+carácter
+adjetivo
+leer en voz alta
+repetir
+lección
+inglés
+incorrecto
+corregir
+composición escrita
+correcto
+billete
+guía
+guía turístico
+guía
+guía turístico
+turista
+itinerario
+guía turística
+autobús turístico
+tour
+templo
+mezquita
+iglesia
+estatua
+palacio
+salida
+direcciones
+atracción turística
+mapa
+organizar
+maleta
+agencia de viajes
+entrada
+hacer turismo
+hacer turismo
+hacer turismo
+hacer turismo
+acompañar
+agenda
+zoo
+deberes
+dictado
+pizarra
+pizarra
+proyector
+test
+cuestionario
+bolígrafo
+cuaderno
+lápiz
+goma de borrar
+conferencia
+clase
+libro de texto
+problema
+tiza
+papel
+rotulador
+diccionario
+aula
+escuela
+silla escolar
+pupitre
+tarde
+asistir a
+llegar
+asistir a una conferencia
+contestar
+enseñar
+hacer un examen
+preguntar a
+llegar tarde
+hacer una frase
+cerrar
+subrayar
+borrar
+abrir
+escuchar
+aprobar un examen
+ausente
+Más despacio, por favor.
+No le entiendo.
+Otra vez, por favor.
+Es difícil.
+secretario
+policía
+policía
+oficinista
+agricultor
+cocinero
+ama de casa
+ama de casa
+obrero
+ingeniero
+bombero
+secretaria
+gerente
+trabajador de empresa
+empresario
+profesor
+programador
+vendedor
+banquero
+diseñador
+artista
+soldado
+empresario
+trabajador de la construcción
+mecánico
+oficina
+compañero de trabajo
+documento
+escritorio
+fax
+fotocopiadora
+enrutador
+sobre
+DVD
+grapadora
+grapadora
+clip
+CD
+carpeta
+escuela primaria
+escuela media
+instituto
+universidad
+universidad
+matrícula
+biblioteca
+gimnasio
+año escolar
+vacaciones escolares
+vacaciones
+vacaciones de verano
+escuela de verano
+final
+departamento
+director
+mochila
+tachuela
+bolígrafo
+portaminas
+regla
+mina
+pegamento
+acabado de obra
+empresa
+asignar
+horas extras
+subordinar
+supervisar
+turno
+retirar
+traducir
+alfabeto
+palabra
+frase
+lingüística
+frase
+cumpleaños
+graduación
+promoción
+aniversario
+funeral
+viaje
+graduado
+boda
+mudarse
+nacer
+conseguir trabajo
+morir
+trabajo
+nacer
+comprometerse
+casarse
+fiesta
+ceremonia
+religión
+Islam
+Protestantismo
+Catolicismo
+Hinduismo
+Budismo
+Taoísmo
+Biblia
+Corán
+sacerdote
+judaísmo
+historia
+geografía
+política
+biología
+química
+física
+economía
+informática
+medicina
+educación
+idiomas
+ciencias de la tierra
+ciencia
+sociología
+matemáticas
+economía
+derecho
+Océano Pacífico
+Océano Atlántico
+Océano Ártico
+Océano Índico
+Océano Austral
+Bruselas
+Ciudad de México
+Madrid
+Nueva Delhi
+Tokio
+Pekín
+Londres
+Washington/ D.C.
+Toronto
+París
+Sídney
+Bangkok
+Berlín
+Seúl
+Los Angeles
+Nueva York
+Roma
+Dubai
+Moscú
+Australia
+Antártida
+Asia
+África
+Europa
+América del Norte
+América del Sur
+China
+Estados Unidos
+India
+Francia
+Inglaterra
+Canadá
+Italia
+Rusia
+Japón
+Corea del Sur
+Brasil
+Portugal
+España
+México
+Argentina
+Egipto
+Singapur
+Australia
+primera clase
+avión
+cinturón de seguridad
+número de asiento
+almohada
+flotador
+chaleco salvavidas
+diferencia horaria
+mareo
+manta
+bolsa de mareo
+auriculares
+auriculares
+auriculares
+cabina
+compartimento superior
+salida de emergencia
+asiento de pasillo
+asiento de ventanilla
+piloto
+carga
+terminal
+cancelar
+cambio de moneda
+recogida de equipajes
+billete de avión
+embarcar
+puerta de embarque
+confirmar
+retraso
+reservar
+despegue
+aterrizar
+libre de impuestos
+hangar
+oficina de correos
+tienda
+comisaría de policía
+farmacia
+panadería
+cine
+alquiler
+piso
+escalera de incendios
+ascensor
+torre
+edificio
+superintendente
+rascacielos
+escalera mecánica
+patio
+buzón
+papelería
+escribir una carta
+paquete
+dirección
+enviar una carta
+carta urgente
+correo urgente
+correo certificado
+destinatario
+destinatario
+correo aéreo
+sello
+sello en una carta
+cartero
+devolución
+correo
+carta
+sello
+metro
+tren
+autobús
+trolebús
+tarifa
+parada de autobús
+esquina
+acera
+giro a la derecha
+giro a la izquierda
+intersección
+cruce
+intersección
+cruce
+paso elevado
+girar en una esquina
+abarrotado
+puente
+atasco
+rotonda
+semáforo en rojo
+señal de stop
+límite de velocidad
+autopista
+carretera
+calle
+semáforo
+girar
+sentido único
+parque
+plaza
+pasarela aérea
+señal
+carga
+billete
+ida y vuelta
+taquilla
+control de equipajes
+tren exprés
+tren local
+horario
+control de billetes
+taquilla
+tren bala
+andén
+número de tren
+conductor
+vía del tren
+vagón restaurante
+asientos para minusválidos
+agarrarse a la barandilla
+ceder el asiento
+sala de espera
+parada
+estación de tren
+máquina expendedora de billetes
+taquilla
+viaje
+transbordador
+transferencia
+pagar dinero
+conductor
+metro
+metro
+taxi
+bicicleta
+monorraíl
+pasajero
+licencia
+moto
+motocicleta
+scooter
+teleférico
+vehículo
+barco
+helicóptero
+camión
+ciclomotor
+subir al coche
