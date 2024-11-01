@@ -46279,18 +46279,21 @@
             chronologicalModePressCount = 0;
         }
 
-        // FUnktioniert noch nicht
+        // Funktion zum Anzeigen eines Pro-Modus-Hinweises und Ändern der Hintergrundfarbe
         function premiumalert() {
             const proModeEnabled = document.querySelector('.switch input').checked;
             console.log('Checkbox status:', proModeEnabled);
             
-            // Alert nur bei aktivierter Checkbox
+            // Hintergrundfarbe ändern
             if (proModeEnabled) {
+                document.body.style.backgroundColor = '#333';
                 alert("💎 PRO-Funktionen aktiviert!");
             } else {
+                document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
         }
+
 
         // Funktion zum Umschalten der Sichtbarkeit des Premium-Buttons
         function togglePremiumButton() {
