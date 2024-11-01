@@ -46304,26 +46304,26 @@
             } 
             
             else if (proModeEnabled && !window.matchMedia("(orientation: landscape)").matches) {
-                document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
-                document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
+                document.body.style.backgroundColor = '#333'; // Zurücksetzen auf Standardfarbe
+                document.getElementById('frage-text').style.color = '#ffffff'; // Textfarbe auf Schwarz setzen
 
                 document.querySelectorAll('.sonderzeichen').forEach(element => {
-                    element.style.color = '#000000';
+                    element.style.color = '#ffffff';
                 });
 
                 document.querySelectorAll('.counter-display').forEach(element => {
-                    element.style.color = '#000000';
+                    element.style.color = '#ffffff';
                 });
 
-                document.getElementById('timer').style.color = '#000000';
+                document.getElementById('timer').style.color = '#ffffff';
 
                 document.getElementById('vokabel-display').style.color = '#ffffff';
 
-                alert("❌ PRO-Funktionen deaktiviert!");
+                alert("💎 PRO-Funktionen aktiviert!");
             }
 
             else if (!proModeEnabled && window.matchMedia("(orientation: landscape)").matches) {
-                document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
+                document.body.style.backgroundColor = ''; 
                 document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
 
                 document.querySelectorAll('.sonderzeichen').forEach(element => {
@@ -46331,12 +46331,12 @@
                 });
 
                 document.querySelectorAll('.counter-display').forEach(element => {
-                    element.style.color = '#000000';
+                    element.style.color = '#ffffff';
                 });
 
-                document.getElementById('timer').style.color = '#000000';
+                document.getElementById('timer').style.color = '#ffffff';
 
-                document.getElementById('vokabel-display').style.color = '#ffffff';
+                document.getElementById('vokabel-display').style.color = '#000000';
 
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
@@ -46355,7 +46355,7 @@
 
                 document.getElementById('timer').style.color = '#000000';
 
-                document.getElementById('vokabel-display').style.color = '#ffffff';
+                document.getElementById('vokabel-display').style.color = '#000000';
 
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
