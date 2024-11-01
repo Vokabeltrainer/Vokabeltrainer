@@ -46321,6 +46321,44 @@
 
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
+
+            else if (!proModeEnabled && window.matchMedia("(orientation: landscape)").matches) {
+                document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
+                document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
+
+                document.querySelectorAll('.sonderzeichen').forEach(element => {
+                    element.style.color = '#000000';
+                });
+
+                document.querySelectorAll('.counter-display').forEach(element => {
+                    element.style.color = '#000000';
+                });
+
+                document.getElementById('timer').style.color = '#000000';
+
+                document.getElementById('vokabel-display').style.color = '#ffffff';
+
+                alert("❌ PRO-Funktionen deaktiviert!");
+            }
+
+            else if (!proModeEnabled && !window.matchMedia("(orientation: landscape)").matches) {
+                document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
+                document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
+
+                document.querySelectorAll('.sonderzeichen').forEach(element => {
+                    element.style.color = '#000000';
+                });
+
+                document.querySelectorAll('.counter-display').forEach(element => {
+                    element.style.color = '#000000';
+                });
+
+                document.getElementById('timer').style.color = '#000000';
+
+                document.getElementById('vokabel-display').style.color = '#ffffff';
+
+                alert("❌ PRO-Funktionen deaktiviert!");
+            }
         }
 
         // Funktion zum Umschalten der Sichtbarkeit des Premium-Buttons
