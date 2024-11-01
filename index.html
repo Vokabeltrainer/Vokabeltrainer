@@ -46293,13 +46293,22 @@
                     element.style.color = '#ffffff';
                 });
 
+                document.querySelectorAll('.counter-display').forEach(element => {
+                    element.style.color = '#ffffff';
+                });
+
                 alert("💎 PRO-Funktionen aktiviert!");
+
             } else {
                 document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
                 document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
 
                 document.querySelectorAll('.sonderzeichen').forEach(element => {
-                    element.style.color = '#ffffff';
+                    element.style.color = '#000000';
+                });
+
+                document.querySelectorAll('.counter-display').forEach(element => {
+                    element.style.color = '#000000';
                 });
 
                 alert("❌ PRO-Funktionen deaktiviert!");
