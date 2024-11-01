@@ -46285,17 +46285,18 @@
             const proModeEnabled = document.querySelector('.switch input').checked;
             console.log('Checkbox status:', proModeEnabled);
 
-            // Hintergrundfarbe für das body-Element und .sidebar ändern
+            // Hintergrundfarbe für das body-Element, .sidebar und Textfarbe für #frage-text ändern
             if (proModeEnabled) {
                 document.body.style.backgroundColor = '#333';
-                document.querySelector('.sidebar').style.backgroundColor = '#000000'; // Beispiel für die Sidebar-Farbe
+                document.getElementById('frage-text').style.color = '#ffffff'; // Textfarbe auf Schwarz setzen
                 alert("💎 PRO-Funktionen aktiviert!");
             } else {
                 document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
-                document.querySelector('.sidebar').style.backgroundColor = ''; // Zurücksetzen der Sidebar-Farbe
+                document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Weiß setzen
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
         }
+
 
         // Funktion zum Umschalten der Sichtbarkeit des Premium-Buttons
         function togglePremiumButton() {
