@@ -46285,7 +46285,7 @@
             console.log('Checkbox status:', proModeEnabled);
 
             // Hintergrundfarbe für das body-Element, .sidebar und Textfarbe für #frage-text ändern
-            if (proModeEnabled) {
+            if (proModeEnabled && window.matchMedia("(orientation: landscape)").matches)  {
                 document.body.style.backgroundColor = '#333';
                 document.getElementById('frage-text').style.color = '#ffffff'; // Textfarbe auf Weiß setzen
 
