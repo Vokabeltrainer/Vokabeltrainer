@@ -46283,16 +46283,19 @@
         function premiumalert() {
             const proModeEnabled = document.querySelector('.switch input').checked;
             console.log('Checkbox status:', proModeEnabled);
-            
-            // Hintergrundfarbe ändern
+
+            // Hintergrundfarbe für das body-Element und .sidebar ändern
             if (proModeEnabled) {
                 document.body.style.backgroundColor = '#333';
+                document.querySelector('.sidebar').style.backgroundColor = '#000000'; // Beispiel für die Sidebar-Farbe
                 alert("💎 PRO-Funktionen aktiviert!");
             } else {
                 document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
+                document.querySelector('.sidebar').style.backgroundColor = ''; // Zurücksetzen der Sidebar-Farbe
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
         }
+
 
 
         // Funktion zum Umschalten der Sichtbarkeit des Premium-Buttons
