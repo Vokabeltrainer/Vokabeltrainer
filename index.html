@@ -46284,12 +46284,11 @@
             const proModeEnabled = document.querySelector('.switch input').checked;
             console.log('Checkbox status:', proModeEnabled);
 
-            if (window.matchMedia("(orientation: landscape)").matches && proModeEnabled) {
-
+            // Hintergrundfarbe für das body-Element, .sidebar und Textfarbe für #frage-text ändern
+            if (proModeEnabled) {
                 document.body.style.backgroundColor = '#333';
- 
-                document.getElementById('frage-text').style.color = '#ffffff';
-                
+                document.getElementById('frage-text').style.color = '#ffffff'; // Textfarbe auf Weiß setzen
+
                 document.querySelectorAll('.sonderzeichen').forEach(element => {
                     element.style.color = '#ffffff';
                 });
@@ -46298,19 +46297,14 @@
                     element.style.color = '#ffffff';
                 });
 
-                document.getElementById('timer').style.color = '#ffffff';
-
-                document.getElementById('vokabel-display').style.color = '#ffffff';
+                document.getElementById('timer').style.color = '#ffffff'; // Textfarbe auf Weiß setzen
 
                 alert("💎 PRO-Funktionen aktiviert!");
-            }
 
-            else if (window.matchMedia("(orientation: landscape)").matches && !proModeEnabled) {
+            } else {
+                document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
+                document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
 
-                document.body.style.backgroundColor = '';
- 
-                document.getElementById('frage-text').style.color = '#000000';
-                
                 document.querySelectorAll('.sonderzeichen').forEach(element => {
                     element.style.color = '#000000';
                 });
@@ -46320,50 +46314,6 @@
                 });
 
                 document.getElementById('timer').style.color = '#ffffff';
-
-                document.getElementById('vokabel-display').style.color = '#000000';
-
-                alert("❌ PRO-Funktionen deaktiviert!");
-            }
-
-            else if (!window.matchMedia("(orientation: landscape)").matches && proModeEnabled) {
-
-                document.body.style.backgroundColor = '#333';
- 
-                document.getElementById('frage-text').style.color = '#ffffff';
-                
-                document.querySelectorAll('.sonderzeichen').forEach(element => {
-                    element.style.color = '#ffffff';
-                });
-
-                document.querySelectorAll('.counter-display').forEach(element => {
-                    element.style.color = '#ffffff';
-                });
-
-                document.getElementById('timer').style.color = '#ffffff';
-
-                document.getElementById('vokabel-display').style.color = '#000000;
-
-                alert("💎 PRO-Funktionen aktiviert!");
-            }
-
-            else if (!window.matchMedia("(orientation: landscape)").matches && !proModeEnabled) {
-
-                document.body.style.backgroundColor = '';
- 
-                document.getElementById('frage-text').style.color = '#000000';
-                
-                document.querySelectorAll('.sonderzeichen').forEach(element => {
-                    element.style.color = '#000000';
-                });
-
-                document.querySelectorAll('.counter-display').forEach(element => {
-                    element.style.color = '#000000';
-                });
-
-                document.getElementById('timer').style.color = '#000000';
-
-                document.getElementById('vokabel-display').style.color = '#ffffff';
 
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
