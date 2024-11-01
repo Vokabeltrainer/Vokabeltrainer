@@ -864,7 +864,6 @@
                 margin: 15px 0vh;
                 font-family: 'Roboto', sans-serif;
                 font-size: 19px;
-                color: #ffffff;
             }
 
             .container-main {
@@ -46289,12 +46288,20 @@
             if (proModeEnabled) {
                 document.body.style.backgroundColor = '#333';
                 document.getElementById('frage-text').style.color = '#ffffff'; // Textfarbe auf Weiß setzen
-                document.getElementById('.sonderzeichen').style.color = '#ffffff'; // Textfarbe auf Weiß setzen
+
+                document.querySelectorAll('.sonderzeichen').forEach(element => {
+                    element.style.color = '#ffffff';
+                });
+
                 alert("💎 PRO-Funktionen aktiviert!");
             } else {
                 document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
                 document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
-                document.getElementById('.sonderzeichen').style.color = '#000000'; // Textfarbe auf Schwarz setzen
+
+                document.querySelectorAll('.sonderzeichen').forEach(element => {
+                    element.style.color = '#ffffff';
+                });
+
                 alert("❌ PRO-Funktionen deaktiviert!");
             }
         }
