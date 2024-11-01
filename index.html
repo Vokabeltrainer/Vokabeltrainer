@@ -46301,7 +46301,9 @@
 
                 alert("💎 PRO-Funktionen aktiviert!");
 
-            } else {
+            } 
+            
+            else if (proModeEnabled && !window.matchMedia("(orientation: landscape)").matches) {
                 document.body.style.backgroundColor = ''; // Zurücksetzen auf Standardfarbe
                 document.getElementById('frage-text').style.color = '#000000'; // Textfarbe auf Schwarz setzen
 
