@@ -49405,7 +49405,7 @@
                 const url = URL.createObjectURL(blob);
                 const a = document.createElement('a');
                 a.href = url;
-                a.download = 'wortpaare.json';
+                a.download = `wortpaare_${wordPairs.length}.json`;
                 document.body.appendChild(a);
                 a.click();
                 document.body.removeChild(a);
