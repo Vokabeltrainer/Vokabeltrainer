@@ -893,6 +893,7 @@
                 font-family: 'Roboto', sans-serif;
                 padding: 5px;
                 margin-bottom: 10px;
+                margin-top: 10px;
                 width: 30vw;
                 border: 0px solid #747474;
                 border-radius: 4px;
@@ -49702,7 +49703,10 @@
                 const fvSparrate = sparrate * (Math.pow(1 + monatlicheRendite, monate) - 1) / monatlicheRendite;
                 const endkapital = fvStartkapital + fvSparrate;
 
-                document.getElementById('result').innerHTML = `Endkapital nach ${jahre} Jahren: <strong>${endkapital.toFixed(0)} €</strong>`;
+                // Ergebnis anzeigen
+                document.getElementById('result').innerHTML = 
+                    `Endkapital nach ${jahre} Jahren: <strong>${endkapitalFormatted} €</strong><br>` +
+                    `Eigenkapital (ohne Zinsen): <strong>${eigenkapitalFormatted} €</strong>`;
             };
         }
 
