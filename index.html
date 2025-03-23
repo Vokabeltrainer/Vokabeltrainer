@@ -49691,17 +49691,27 @@
             window.calculateZinsen = function(event) {
                 event.preventDefault();
 
+                // Eingabewerte holen
                 const startkapital = parseFloat(document.getElementById('startkapital').value);
                 const sparrate = parseFloat(document.getElementById('sparrate').value);
-                const rendite = parseFloat(document.getElementById('rendite').value) / 100;
+                const rendite = parseFloat(document.getElementById('rendite').value) / 100; // in Dezimal umwandeln
                 const jahre = parseInt(document.getElementById('jahre').value);
 
+                // Monatliche Rendite und Anzahl Monate
                 const monatlicheRendite = rendite / 12;
                 const monate = jahre * 12;
 
+                // Berechnung des Endkapitals
                 const fvStartkapital = startkapital * Math.pow(1 + rendite, jahre);
                 const fvSparrate = sparrate * (Math.pow(1 + monatlicheRendite, monate) - 1) / monatlicheRendite;
                 const endkapital = fvStartkapital + fvSparrate;
+
+                // Berechnung der Eigenkapitalquote
+                const eigenkapital = startkapital + (sparrate * monate);
+
+                // Ergebnis mit Tausendertrennzeichen formatieren
+                const endkapitalFormatted = endkapital.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                const eigenkapitalFormatted = eigenkapital.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
                 // Ergebnis anzeigen
                 document.getElementById('result').innerHTML = 
