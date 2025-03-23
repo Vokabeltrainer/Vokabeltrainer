@@ -896,7 +896,7 @@
                 width: 30vw;
                 border: 0px solid #747474;
                 border-radius: 4px;
-                margin-left: 26vw;
+                margin-left: 0vw;
                 font-size: 16px;
                 font-weight: bold;
             }
@@ -49668,10 +49668,10 @@
                 <h2>Zinsrechner</h2>
                 <form onsubmit="calculateZinsen(event)">
                     <label for="startkapital">Startkapital (€):</label>
-                    <input type="number" id="startkapital" step="0.01" value="40000" required>
+                    <input type="number" id="startkapital" step="0.01" value="10000" required>
 
                     <label for="sparrate">Monatliche Sparrate (€):</label>
-                    <input type="number" id="sparrate" step="0.01" value="2000" required>
+                    <input type="number" id="sparrate" step="0.01" value="500" required>
 
                     <label for="rendite">Jährliche Rendite (%):</label>
                     <input type="number" id="rendite" step="0.01" value="7" required>
@@ -49702,7 +49702,7 @@
                 const fvSparrate = sparrate * (Math.pow(1 + monatlicheRendite, monate) - 1) / monatlicheRendite;
                 const endkapital = fvStartkapital + fvSparrate;
 
-                document.getElementById('result').innerHTML = `Endkapital nach ${jahre} Jahren: <strong>${endkapital.toFixed(2)} €</strong>`;
+                document.getElementById('result').innerHTML = `Endkapital nach ${jahre} Jahren: <strong>${endkapital.toFixed(0)} €</strong>`;
             };
         }
 
