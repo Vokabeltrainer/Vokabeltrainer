@@ -893,7 +893,6 @@
                 font-family: 'Roboto', sans-serif;
                 padding: 5px;
                 margin-bottom: 10px;
-                margin-top: 10px;
                 width: 30vw;
                 border: 0px solid #747474;
                 border-radius: 4px;
@@ -49648,14 +49647,6 @@
             };
         }
 
-
-
-
-
-
-
-
-
         function zinsrechner() {
             const existingContainer = document.getElementById('converter-container');
             if (existingContainer) {
@@ -49710,8 +49701,8 @@
                 const eigenkapital = startkapital + (sparrate * monate);
 
                 // Ergebnis mit Tausendertrennzeichen formatieren
-                const endkapitalFormatted = endkapital.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                const eigenkapitalFormatted = eigenkapital.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                const endkapitalFormatted = endkapital.toLocaleString('de-DE', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                const eigenkapitalFormatted = eigenkapital.toLocaleString('de-DE', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
                 // Ergebnis anzeigen
                 document.getElementById('result').innerHTML = 
@@ -49719,18 +49710,6 @@
                     `Eigenkapital (ohne Zinsen): <strong>${eigenkapitalFormatted} €</strong>`;
             };
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
         function updateMainImage() {
             let sprache = document.getElementById('sprache').value.toLowerCase(); // Wert des Dropdown-Menüs holen und in Kleinbuchstaben umwandeln
