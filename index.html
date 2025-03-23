@@ -49647,6 +49647,77 @@
             };
         }
 
+
+
+
+
+
+
+
+
+        function zinsrechner() {
+            const existingContainer = document.getElementById('zinsrechner-container');
+            if (existingContainer) {
+                existingContainer.remove();
+                return;
+            }
+
+            const container = document.createElement('div');
+            container.id = 'zinsrechner-container';
+            container.innerHTML = `
+                <h2>Zinsrechner</h2>
+                <form onsubmit="calculateZinsen(event)">
+                    <label for="startkapital">Startkapital (€):</label>
+                    <input type="number" id="startkapital" step="0.01" value="40000" required>
+
+                    <label for="sparrate">Monatliche Sparrate (€):</label>
+                    <input type="number" id="sparrate" step="0.01" value="2000" required>
+
+                    <label for="rendite">Jährliche Rendite (%):</label>
+                    <input type="number" id="rendite" step="0.01" value="7" required>
+
+                    <label for="jahre">Zeitraum (Jahre):</label>
+                    <input type="number" id="jahre" step="1" value="10" required>
+
+                    <button type="submit">Berechnen</button>
+                </form>
+                <div id="result"></div>
+                <button onclick="zinsrechner()">Schließen</button>
+            `;
+
+            document.body.appendChild(container);
+
+            window.calculateZinsen = function(event) {
+                event.preventDefault();
+
+                const startkapital = parseFloat(document.getElementById('startkapital').value);
+                const sparrate = parseFloat(document.getElementById('sparrate').value);
+                const rendite = parseFloat(document.getElementById('rendite').value) / 100;
+                const jahre = parseInt(document.getElementById('jahre').value);
+
+                const monatlicheRendite = rendite / 12;
+                const monate = jahre * 12;
+
+                const fvStartkapital = startkapital * Math.pow(1 + rendite, jahre);
+                const fvSparrate = sparrate * (Math.pow(1 + monatlicheRendite, monate) - 1) / monatlicheRendite;
+                const endkapital = fvStartkapital + fvSparrate;
+
+                document.getElementById('result').innerHTML = `Endkapital nach ${jahre} Jahren: <strong>${endkapital.toFixed(2)} €</strong>`;
+            };
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
         function updateMainImage() {
             let sprache = document.getElementById('sprache').value.toLowerCase(); // Wert des Dropdown-Menüs holen und in Kleinbuchstaben umwandeln
             let imageUrl = '';
@@ -50300,7 +50371,7 @@
                 <button id="umwandler" title= "💡 Grammatikbücher Spanisch" onclick="pdfbücher()">Bücher/PDF</button>
                 <br>
                 <button id="umwandler" title= "💡 Spanisch Hörverstehen - YouTube Playlist" onclick="hörverstehen()">Playlist</button>
-                <button id="umwandler" title= "💡 Platzhalter" onclick="duolingo_link()">Duolingo</button>
+                <button id="umwandler" title= "💡 Platzhalter" onclick="zinsrechner()">Zinsrechner</button>
                 <button id="umwandler" title= "⚠️ Wortpaar-Konverter für .json-Dateiformat - Zusatzfunktion" onclick="konvertierer(); konverter_alert()">Konverter</button>
                 <br>
                 <br>
