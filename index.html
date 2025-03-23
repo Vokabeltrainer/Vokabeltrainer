@@ -49656,14 +49656,14 @@
 
 
         function zinsrechner() {
-            const existingContainer = document.getElementById('zinsrechner-container');
+            const existingContainer = document.getElementById('converter-container');
             if (existingContainer) {
                 existingContainer.remove();
                 return;
             }
 
             const container = document.createElement('div');
-            container.id = 'zinsrechner-container';
+            container.id = 'converter-container';
             container.innerHTML = `
                 <h2>Zinsrechner</h2>
                 <form onsubmit="calculateZinsen(event)">
