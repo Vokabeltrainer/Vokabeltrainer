@@ -6,9 +6,11 @@
     <title>Vokabeltrainer-App</title>
     <link rel="icon" href="book.png" type="image/png">
 
-    <script type="text/javascript" async
-    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+
 
     <style>
         body {
@@ -49678,13 +49680,7 @@
                     <button type="submit">Berechnen</button>
                 </form>
                 <div id="result"></div>
-
-                <p>Die Zinseszinsformel lautet:</p>
-                <div id="zinsformel">
-                    \[
-                    E = K \cdot (1 + r_j)^t + S \cdot \frac{(1 + r_m)^n - 1}{r_m}
-                    \]
-                </div>
+                <div id="formula-container"></div>
 
                 <button onclick="zinsrechner()">Schließen</button>
             `;
@@ -49719,14 +49715,14 @@
                 // Ergebnis anzeigen
                 document.getElementById('result').innerHTML = 
                     `Endkapital nach ${jahre} Jahren: <strong>${endkapitalFormatted} €</strong><br>` +
-                    `Eigenkapital (ohne Zinsen): <strong>${eigenkapitalFormatted} €</strong><br><br>` +
-                    `Formel: Endkapital = K * (1+rj)^t + S * ((1 + rm)^n - 1) / rm<br><br>` +
-                    `(K) = Startkapital<br>` +
-                    `(rj) = jährliche Rendite<br>` +
-                    `(t) = Anzahl der Jahre<br>` +
-                    `(S) = monatliche Sparrate<br>` +
-                    `(rm) = monatliche Rendite<br>` +
-                    `(n) = Anzahl der Monate<br>`;
+                    `Eigenkapital (ohne Zinsen): <strong>${eigenkapitalFormatted} €</strong><br><br>`;
+
+                // Formel mit KaTeX rendern
+                katex.render(
+                    "E = K \\cdot (1 + r_j)^t + S \\cdot \\frac{(1 + r_m)^n - 1}{r_m}",
+                    document.getElementById('formula-container'),
+                    { throwOnError: false }
+                );
             };
         }
 
