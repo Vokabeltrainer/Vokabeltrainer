@@ -49719,9 +49719,16 @@
 
                 // Formel mit KaTeX rendern
                 katex.render(
-                    "E = K \\cdot (1 + r_j)^t + S \\cdot \\frac{(1 + r_m)^n - 1}{r_m}",
+                    "E = K \\cdot (1 + r_j)^t + S \\cdot \\frac{(1 + r_m)^n - 1}{r_m} \\\\ " +
+                    "\\text{mit:} \\\\ " +
+                    "K = \\text{Startkapital} \\\\ " +
+                    "r_j = \\text{jährliche Rendite} \\\\ " +
+                    "t = \\text{Anzahl der Jahre} \\\\ " +
+                    "S = \\text{monatliche Sparrate} \\\\ " +
+                    "r_m = \\text{monatliche Rendite} \\\\ " +
+                    "n = \\text{Anzahl der Monate}",
                     document.getElementById('formula-container'),
-                    { throwOnError: false }
+                    { throwOnError: false, displayMode: true }
                 );
             };
         }
