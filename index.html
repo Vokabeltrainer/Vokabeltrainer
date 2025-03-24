@@ -6,6 +6,12 @@
     <title>Vokabeltrainer-App</title>
     <link rel="icon" href="book.png" type="image/png">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/katex.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+
+
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -49669,11 +49675,19 @@
                     <input type="number" id="rendite" step="0.01" value="7" required>
 
                     <label for="jahre">Zeitraum (Jahre):</label>
-                    <input type="number" id="jahre" step="1" value="10" required><br>
+                    <input type="number" id="jahre" step="1" value="10" required>
 
                     <button type="submit">Berechnen</button>
                 </form>
                 <div id="result"></div>
+
+                <p>Die Zinseszinsformel lautet:</p>
+                <div id="zinsformel">
+                    \[
+                    E = K \cdot (1 + r_j)^t + S \cdot \frac{(1 + r_m)^n - 1}{r_m}
+                    \]
+                </div>
+
                 <button onclick="zinsrechner()">Schließen</button>
             `;
 
