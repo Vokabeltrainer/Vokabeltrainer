@@ -48622,10 +48622,10 @@
             ],
 
             "Holländisch": [
-                { name: "Duolingo I", vokabeln: [
-                    { fremdsprache: "ciao", deutsch: "Hallo! Tschüss!" },
-                    { fremdsprache: "buongiorno", deutsch: "Guten Tag" },
-                    { fremdsprache: "le musiche", deutsch: "die Musiken" }
+                { name: "Duolingo", vokabeln: [
+                    { fremdsprache: "jongen", deutsch: "Junge" },
+                    { fremdsprache: "ik", deutsch: "ich" },
+                    { fremdsprache: "ben", deutsch: "bin" }
                 ]},
             ]
             // Weitere Sprachen hier hinzufügen (SPÄEP)
@@ -48809,7 +48809,7 @@
             }
 
             else if (sprache === "Holländisch") {
-                lernrichtung.innerHTML = `<option value="de-nl">Deutsch - Holländisch</option><option value="nl-de">Holländisch - Deutsch</option>`;
+                lernrichtung.innerHTML = `<option value="de-ne">Deutsch - Holländisch</option><option value="ne-de">Holländisch - Deutsch</option>`;
             }
         
             await loadNewVokabel(); // Automatisch eine Vokabel laden
@@ -49143,8 +49143,8 @@
                 'de-it': currentVokabel.fremdsprache, // Annahme: Fremdsprache ist Italienisch
                 'it-de': currentVokabel.deutsch, // Annahme: Fremdsprache ist Deutsch
 
-                'de-nl': currentVokabel.fremdsprache, // Annahme: Fremdsprache ist Holländisch
-                'nl-de': currentVokabel.deutsch, // Annahme: Fremdsprache ist Deutsch
+                'de-ne': currentVokabel.fremdsprache, // Annahme: Fremdsprache ist Holländisch
+                'ne-de': currentVokabel.deutsch, // Annahme: Fremdsprache ist Deutsch
                 // Weitere Sprachpaare hier hinzufügen (SPÄEP)
             };
         
@@ -49188,8 +49188,8 @@
                 'de-it': currentVokabel.fremdsprache.toLowerCase().trim(), 
                 'it-de': currentVokabel.deutsch.toLowerCase().trim(),
                 
-                'de-nl': currentVokabel.fremdsprache.toLowerCase().trim(), 
-                'nl-de': currentVokabel.deutsch.toLowerCase().trim(), 
+                'de-ne': currentVokabel.fremdsprache.toLowerCase().trim(), 
+                'ne-de': currentVokabel.deutsch.toLowerCase().trim(), 
                 // Weitere Sprachpaare hier hinzufügen (SPÄEP)
             };
         
