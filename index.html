@@ -11,7 +11,6 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.4/contrib/auto-render.min.js"
         onload="renderMathInElement(document.body);"></script>
 
-
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -48643,7 +48642,9 @@
         let timerStarted = false;       // Flag, ob der Timer gestartet ist  
 
         let anzahlVokabeln = 0;
-   
+
+        // SPÄEP = Sprahänderungseingriffspunkt
+
         // Aktualisiert im Sekundentakt den Vokabelzähler, Timer sowie die Uhrzeit
         function updateDisplay() {
             const vokabelCounterElem = document.getElementById('vokabel-counter');
@@ -48780,6 +48781,7 @@
             updateMainImage(sprache);
         }
         
+        // Funktion zum Updaten der Lernrichtung (SPÄEP)
         async function updateLernrichtung() {
             const sprache = document.getElementById("sprache").value;
             const lernrichtung = document.getElementById("lernrichtung");
@@ -48898,7 +48900,7 @@
 
         }
 
-        // Funktion zur Anzeige der Vokabel (zur Vereinfachung des Codes)
+        // Funktion zur Anzeige der Vokabel (zur Vereinfachung des Codes) (SPÄEP)
         function displayVokabel(vokabel, richtung) {
             const spracheOptions = {
                 'de-es': { frage: "Was bedeutet", antwort: "auf Spanisch?" },
@@ -49032,6 +49034,7 @@
             };
         }
 
+        // Funktion zum Laden der vorherigen Vokabel 
         function loadPreviousVokabel() {
             if (historyIndex > 1) { // Prüfe, ob mindestens zwei vorherige Vokabeln vorhanden sind
                 historyIndex -= 1; // Springe zurück auf die vor-vorherige Vokabel
@@ -49051,7 +49054,7 @@
 
                     'de-it': { frage: "Was bedeutet", antwort: "auf Italienisch?" },
                     'it-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
-                    // Weitere Sprachpaare hier hinzufügen
+                    // Weitere Sprachpaare hier hinzufügen (SPÄEP)
                 }[richtung];
 
                 if (sprachePair) {
@@ -49074,13 +49077,16 @@
                 const sprachePair = {
                     'de-es': { frage: "Was bedeutet", antwort: "auf Spanisch?" },
                     'es-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" },
+
                     'de-en': { frage: "Was bedeutet", antwort: "auf Englisch?" },
                     'en-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" },
+
                     'de-fr': { frage: "Was bedeutet", antwort: "auf Französisch?" },
                     'fr-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" },
+
                     'de-it': { frage: "Was bedeutet", antwort: "auf Italienisch?" },
                     'it-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
-                    // Weitere Sprachpaare hier hinzufügen
+                    // Weitere Sprachpaare hier hinzufügen (SPÄEP)
                 }[richtung];
 
                 if (sprachePair) {
@@ -49115,7 +49121,7 @@
 
                 'de-it': currentVokabel.fremdsprache, // Annahme: Fremdsprache ist Italienisch
                 'it-de': currentVokabel.deutsch, // Annahme: Fremdsprache ist Deutsch
-                // Weitere Sprachpaare hier hinzufügen
+                // Weitere Sprachpaare hier hinzufügen (SPÄEP)
             };
         
             correctAnswer = sprachePair[richtung];
@@ -49157,7 +49163,7 @@
 
                 'de-it': currentVokabel.fremdsprache.toLowerCase().trim(), 
                 'it-de': currentVokabel.deutsch.toLowerCase().trim(), 
-                // Weitere Sprachpaare hier hinzufügen
+                // Weitere Sprachpaare hier hinzufügen (SPÄEP)
             };
         
             correctAnswer = sprachePair[richtung];
@@ -49538,7 +49544,7 @@
             answerInput.focus();
         }
         
-
+        // Funktion zum Änderung der Farbe passend zur Sprache (SPÄEP)
         function updateButtonColor() {
             const selectedLanguage = document.getElementById('sprache').value;
             console.log(`Selected language: ${selectedLanguage}`); // Debugging: Gibt die gewählte Sprache aus
@@ -49780,6 +49786,7 @@
             };
         }
 
+        // Funktion zum Mappen des Hauptbilder der Sprache (SPÄEP)
         function updateMainImage() {
             let sprache = document.getElementById('sprache').value.toLowerCase(); // Wert des Dropdown-Menüs holen und in Kleinbuchstaben umwandeln
             let imageUrl = '';
@@ -50412,7 +50419,7 @@
                     <option value="Englisch">🇬🇧 Englisch</option>
                     <option value="Französisch">🇫🇷 Französisch</option>
                     <option value="Italienisch">🇮🇹 Italienisch</option>
-                    <!-- Weitere Sprachen hier hinzufügen  ⯇⌫ 🇪🇸 🇬🇧 🇫🇷 🇮🇹 ⏪⬅️📋🛠️🎲 ⋘ ♆≣ ☰ ☰ ↹⇇⇦ ⇐ 🡄⮨🢠⭰⮈⋘✖️ ALT+164 ñ ALT+168 ¿ ALT+173 ¡  style="cursor: not-allowed; opacity: 1;"-->
+                    <!-- Weitere Sprachen hier hinzufügen (SPÄEP)  ⯇⌫ 🇪🇸 🇬🇧 🇫🇷 🇮🇹 ⏪⬅️📋🛠️🎲 ⋘ ♆≣ ☰ ☰ ↹⇇⇦ ⇐ 🡄⮨🢠⭰⮈⋘✖️ ALT+164 ñ ALT+168 ¿ ALT+173 ¡  style="cursor: not-allowed; opacity: 1;"-->
                 </select>
             </div>
             <br>
@@ -50680,11 +50687,7 @@
         document.getElementById("cancelPosition").addEventListener("click", function() {
             document.getElementById("positionPopup").classList.remove("showPopupPosition");
         });
-        
-          
-
-          
-        
+  
     </script>
 </body>
 </html>
