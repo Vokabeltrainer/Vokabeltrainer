@@ -48799,6 +48799,10 @@
             } else if (sprache === "Italienisch") {
                 lernrichtung.innerHTML = `<option value="de-it">Deutsch - Italienisch</option><option value="it-de">Italienisch - Deutsch</option>`;
             }
+
+            else if (sprache === "Holländisch") {
+                lernrichtung.innerHTML = `<option value="de-ne">Deutsch - Holländisch</option><option value="ne-de">Holländisch - Deutsch</option>`;
+            }
         
             await loadNewVokabel(); // Automatisch eine Vokabel laden
         }
@@ -48914,6 +48918,9 @@
         
                 'de-it': { frage: "Was bedeutet", antwort: "auf Italienisch?" },
                 'it-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
+
+                'de-ne': { frage: "Was bedeutet", antwort: "auf Holländisch?" },
+                'ne-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
             };
         
             const sprachePair = spracheOptions[richtung];
@@ -49054,6 +49061,9 @@
 
                     'de-it': { frage: "Was bedeutet", antwort: "auf Italienisch?" },
                     'it-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
+
+                    'de-ne': { frage: "Was bedeutet", antwort: "auf Holländisch?" },
+                    'ne-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
                     // Weitere Sprachpaare hier hinzufügen (SPÄEP)
                 }[richtung];
 
@@ -49086,6 +49096,9 @@
 
                     'de-it': { frage: "Was bedeutet", antwort: "auf Italienisch?" },
                     'it-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
+
+                    'de-ne': { frage: "Was bedeutet", antwort: "auf Holländisch?" },
+                    'ne-de': { frage: "Was bedeutet", antwort: "auf Deutsch?" }
                     // Weitere Sprachpaare hier hinzufügen (SPÄEP)
                 }[richtung];
 
@@ -49121,6 +49134,9 @@
 
                 'de-it': currentVokabel.fremdsprache, // Annahme: Fremdsprache ist Italienisch
                 'it-de': currentVokabel.deutsch, // Annahme: Fremdsprache ist Deutsch
+
+                'de-ne': currentVokabel.fremdsprache, // Annahme: Fremdsprache ist Holländisch
+                'ne-de': currentVokabel.deutsch, // Annahme: Fremdsprache ist Deutsch
                 // Weitere Sprachpaare hier hinzufügen (SPÄEP)
             };
         
@@ -49162,7 +49178,10 @@
                 'fr-de': currentVokabel.deutsch.toLowerCase().trim(), 
 
                 'de-it': currentVokabel.fremdsprache.toLowerCase().trim(), 
-                'it-de': currentVokabel.deutsch.toLowerCase().trim(), 
+                'it-de': currentVokabel.deutsch.toLowerCase().trim(),
+                
+                'de-ne': currentVokabel.fremdsprache.toLowerCase().trim(), 
+                'ne-de': currentVokabel.deutsch.toLowerCase().trim(), 
                 // Weitere Sprachpaare hier hinzufügen (SPÄEP)
             };
         
@@ -49577,6 +49596,12 @@
                     hoverFocusColor = '#114415';
                     break;
 
+                case 'Holländisch':
+                    button.style.backgroundColor = '#142c52'; // Holländisch grün
+                    button.style.color = '#ffffff';
+                    hoverFocusColor = '#4891a4';
+                    break;
+
                 default:
                     button.style.backgroundColor = '#ffc928'; // Standardfarbe Spanisch
                     button.style.color = '#000000';
@@ -49803,6 +49828,9 @@
                     break;
                 case 'italienisch':
                     imageUrl = 'https://as2.ftcdn.net/v2/jpg/04/82/48/87/1000_F_482488790_uEr9CukObnLsN86OQyW0opnm2BmR11Yg.jpg';
+                    break;
+                case 'holländisch':
+                    imageUrl = 'https://www.shutterstock.com/image-vector/netherlands-national-day-banner-design-600nw-2148353119.jpg';
                     break;
                 default:
                     imageUrl = 'https://static.vecteezy.com/ti/gratis-vektor/p3/26399259-spanisch-national-tag-banner-design-spanisch-flagge-und-karte-thema-mit-hintergrund-vorlage-spanisch-flagge-modern-design-abstrakt-geometrisch-retro-formen-von-rot-und-blau-gelb-vektor.jpg';
@@ -50419,7 +50447,8 @@
                     <option value="Englisch">🇬🇧 Englisch</option>
                     <option value="Französisch">🇫🇷 Französisch</option>
                     <option value="Italienisch">🇮🇹 Italienisch</option>
-                    <!-- Weitere Sprachen hier hinzufügen (SPÄEP)  ⯇⌫ 🇪🇸 🇬🇧 🇫🇷 🇮🇹 ⏪⬅️📋🛠️🎲 ⋘ ♆≣ ☰ ☰ ↹⇇⇦ ⇐ 🡄⮨🢠⭰⮈⋘✖️ ALT+164 ñ ALT+168 ¿ ALT+173 ¡  style="cursor: not-allowed; opacity: 1;"-->
+                    <option value="Holländisch">🇳🇱 Holländisch</option>
+                    <!-- Weitere Sprachen hier hinzufügen (SPÄEP)  ⯇⌫ 🇪🇸 🇬🇧 🇫🇷 🇮🇹 🇳🇱⏪⬅️📋🛠️🎲 ⋘ ♆≣ ☰ ☰ ↹⇇⇦ ⇐ 🡄⮨🢠⭰⮈⋘✖️ ALT+164 ñ ALT+168 ¿ ALT+173 ¡  style="cursor: not-allowed; opacity: 1;"-->
                 </select>
             </div>
             <br>
